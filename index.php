@@ -4,12 +4,20 @@ $nome_curso = "";
 $área_tecnologia ="";
 $Quantidade_alunos ="";
 $Empresa_patrocinadora ="";
+$mensagem = "";
 
 if($_SERVER("REQUEST_METHOD") === "POST"){
-    $nome_curso = "";
-    $area_tecnologia = [""];
-    $quantidade_alunos ="";
-    $empresa_patrocinadora ="";
+    $nome_curso = $_POST["nome_curso"];
+    $area_tecnologia = $_POST["area_tecnologia"];
+    $quantidade_alunos = $_POST["quatidade_aluno"];
+    $empresa_patrocinadora = $_POST["empresa_patrocinadora"];
+
+    if($nome_curso === "" || $area_tecnologia === "" ||$quantidade_alunos === "" || $empresa_patrocinadora = "" ){
+
+        $mensagem = "Preencha todos os campos";
+    } else {
+        
+    }
 }
 ?>
 <!DOCTYPE html>
