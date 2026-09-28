@@ -38,26 +38,58 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <style>
     body{
-        background-color: rgb(249, 249, 249)
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: rgb(221, 221, 221);
+        margin: 0;
+        padding: 0;
+    
     }
     #box_01{
-        background-color: rgb(47, 255, 179);
-        height: 100vh;
+        background-color: #399a83;
+        width: 90%;
+        max-width: 1100px;
+        height: 70vh;
+        margin: 120px auto;
+        border-radius: 20px;
         position: relative;
+        padding: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius:20px;
     }
     #art_01{
         position: absolute ;
-        background-color: darkturquoise;
-        width: 745px;
-        height: 100vh;
-
-        left: 40%;
-        top: 0%;
+        background-color: white;
+        width: 60%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        
+        border-top-right-radius: 20px;
+        border-bottom-right-radius:20px;
     }
     #receber{
-        width: 600px;
-        height: 30px;
+        width: 100%;
+        max-width: 600px;
+        height: 35px;
         margin-bottom: 10px;
+        border:none;
+        border-radius: 10px;
+        background-color: #e0dcdc;
+        border-radius: 15px;
+        padding: 5px;
+
+    }
+    @media(max-width: 768px){
+        #box_01{
+            margin-top: 60px;
+            height: auto;
+    }
+        #art_01{
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+    }
     }
     #art_1_2{
         position: relative;
@@ -67,13 +99,36 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         top: 50;
         left: 50;
 
-        transform: translate(15% ,70%);
-    text-align: ;
+        transform: translate(13% , 35%);
     }
      #div_02{
         text-align: center;
     }
+    button{
+        margin-top: 20px;
+        height: 40px;
+        padding: 10px;
+        margin-left: 30px;
+        border-radius: 30px;
+    }
+    #bot_cad{
+        background-color: #399a83;
+        border: none;
+        height: 50px;
+        width: 250px;
+        color: white;
+        font-size: 15px;
+    }
+    #bot_lim{
+        background-color: white;
+        border: 1.5px solid black;
+        height: 50px;
+        width: 190px;
+        
+    }
     
+        
+
 
 
 </style>
@@ -84,7 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <div id="div_01">
             <form action="index.php" method="post">
                 <div id="div_02">
-                <h2>Cadastra curso</h2>
+                <h2 style="font-size:40px;margin:0px;color:#399a83;">Cadastra curso</h2>
                 <p>informe os dados do curso para continuar.</p>
                 </div>
 
@@ -93,8 +148,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <input id="receber" type="text" name="quantidade_alunos" placeholder="Quantidade de alunos" required><br>
                 <input id="receber" type="text" name="empresa_patrocinadora" placeholder="Empresa patrocinadora" required><br>
 
-                <button type="button" onclick="this.form.reset()">Limpar</button>
-                <button type="submit">Cadastra curso</button>
+                <button id="bot_lim" type="button" onclick="this.form.reset()">Limpar</button>
+                <button id="bot_cad" type="submit">Cadastra Curso</button>
             </form>
             </div>
             </article>
