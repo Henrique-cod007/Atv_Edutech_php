@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         background-color: #399a83;
         width: 90%;
         max-width: 1100px;
-        height: 70vh;
+        height: 80vh;
         margin: 120px auto;
         border-radius: 20px;
         position: relative;
@@ -121,10 +121,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
     #bot_lim{
         background-color: white;
-        border: 1.5px solid black;
+        color: #399a83;
+        border: 1.5px solid #399a83;
         height: 50px;
         width: 190px;
         
+    }
+    #div_03{
+        position: absolute;
+        left: -430px;
+        font-size: 20px;
+        text-align: center;
+        color: white;
+    
     }
     
         
@@ -137,10 +146,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <article id="art_01">
             <article id="art_1_2">
             <div id="div_01">
+            <div id="div_03">
+                <h1 style="font-size: 65px;padding">📖</h1>
+                <h1>cadastra curso</h1>
+                <p>preencha todos os dados para<br>registra um curso ao sistema</p>
+            </div>
             <form action="index.php" method="post">
                 <div id="div_02">
-                <h2 style="font-size:40px;margin:0px;color:#399a83;">Cadastra curso</h2>
-                <p>informe os dados do curso para continuar.</p>
+                <h2 style="font-size:40px;margin:0px;color:#399a83;">Cadastro de curso</h2>
+                <p>informe os dados do curso <br> para continuar.</p>
                 </div>
 
                 <input id="receber" type="text" name="nome_curso" placeholder="nome curso" required><br>
@@ -148,8 +162,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <input id="receber" type="text" name="quantidade_alunos" placeholder="Quantidade de alunos" required><br>
                 <input id="receber" type="text" name="empresa_patrocinadora" placeholder="Empresa patrocinadora" required><br>
 
-                <button id="bot_lim" type="button" onclick="this.form.reset()">Limpar</button>
-                <button id="bot_cad" type="submit">Cadastra Curso</button>
+                <button id="bot_lim" type="button" onclick="this.form.reset()"> ↻ Limpar</button>
+                <button id="bot_cad" type="submit"> Cadastra Curso</button>
             </form>
             </div>
             </article>
